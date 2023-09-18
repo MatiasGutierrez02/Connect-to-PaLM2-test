@@ -5,7 +5,8 @@ import './App.css'
 
 const makeRequest = async (inputValue) => {
   const response = await apiService.sendRequest(inputValue)
-  return response;
+  const responseTranslated = await apiService.translate(response)
+  return responseTranslated;
 }
 
 function App() {
